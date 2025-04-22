@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: breast-cancer
+Version: 0.0.0
+Summary: A small python package for predictcion app
+Home-page: https://github.com/kartheek/breast_cancer
+Author: kartheek
+Author-email: kartheekakkabathula@gmail.com
+Project-URL: Bug Tracker, https://github.com/kartheek/breast_cancer/issues
+
+# breast_cancer

@@ -1,0 +1,9 @@
+preprocessing:
+  drop_columns : ["id","Unnamed: 32"]
+  target : ["diagnosis"]
+  axis: 1
+
+model_params:
+  test_size: 0.2
+  random_state: 42
+
