@@ -8,4 +8,14 @@ class DataIngestionConfig :
     local_data_file : Path
 
 
+@dataclass
+class PreProcessing:
+    df_pre_dir:Path
+    drop_columns : list[str]
+    axis : int
+
+@dataclass
+class EDAconfig:
+    report_path : Path
+    df_clean_path : Path
     

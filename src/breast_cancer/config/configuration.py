@@ -6,7 +6,7 @@ from breast_cancer.constants import  *
 
 from breast_cancer.utils.common import read_yaml , create_directories
 
-from breast_cancer.entity.config_entity import DataIngestionConfig
+from breast_cancer.entity.config_entity import DataIngestionConfig , PreProcessing
 
 class ConfigurationManager:
     def __init__(self,
@@ -29,3 +29,12 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+    
+    def preprocessing(self) -> PreProcessing:
+        params = self.params.preprocessing
+        config = self.config.preprocessing
+        
+        create_directories([config.df_pre_dir])
+        pre_processing = PreProcessing(df_pre_dir=config.df_pre_dir,drop_columns=params.drop_columns,axis = params.axis)
+        
+        return pre_processing
