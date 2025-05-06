@@ -19,3 +19,14 @@ class EDAconfig:
     report_path : Path
     df_clean_path : Path
     
+
+@dataclass
+class DataTransform:
+    df_path : Path
+    # transformed_df_path : Path
+    test_size : float
+    random_state : int
+    smote_k_neighbours :int
+    n_pca_components: int
+    scaler_path : Path
+    # pca_model_path : Path

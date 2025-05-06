@@ -5,8 +5,10 @@ src/breast_cancer.egg-info/PKG-INFO
 src/breast_cancer.egg-info/SOURCES.txt
 src/breast_cancer.egg-info/dependency_links.txt
 src/breast_cancer.egg-info/top_level.txt
+src/breast_cancer/components/EDA.py
 src/breast_cancer/components/__init__.py
 src/breast_cancer/components/data_ingestion.py
+src/breast_cancer/components/pre_processing.py
 src/breast_cancer/config/__init__.py
 src/breast_cancer/config/configuration.py
 src/breast_cancer/constants/__init__.py
@@ -14,5 +16,7 @@ src/breast_cancer/entity/__init__.py
 src/breast_cancer/entity/config_entity.py
 src/breast_cancer/pipeline/__init__.py
 src/breast_cancer/pipeline/stage01_data_ingestion.py
+src/breast_cancer/pipeline/stage02_pre_processing.py
+src/breast_cancer/pipeline/stage03_EDA.py
 src/breast_cancer/utils/__init__.py
 src/breast_cancer/utils/common.py

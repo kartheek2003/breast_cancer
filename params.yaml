@@ -7,3 +7,8 @@ model_params:
   test_size: 0.2
   random_state: 42
 
+DataTransform :
+  test_size : 0.2
+  random_state : 42
+  smote_k_neighbours : 5
+  n_pca_components: 5

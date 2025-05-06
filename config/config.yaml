@@ -14,3 +14,9 @@ EDA_config:
   report_path : artifacts/report
   df_clean_path : artifacts/preprocessing/df_clean.csv
 
+
+DataTransform:
+  df_path : artifacts/preprocessing/df_clean.csv
+  # transformed_df_path : artifacts/DataTransformation
+  scaler_path : artifacts/models/scaler
+  # pca_model_path : artifacts/models/pca

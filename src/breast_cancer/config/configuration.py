@@ -6,7 +6,7 @@ from breast_cancer.constants import  *
 
 from breast_cancer.utils.common import read_yaml , create_directories
 
-from breast_cancer.entity.config_entity import DataIngestionConfig , PreProcessing
+from breast_cancer.entity.config_entity import DataIngestionConfig , PreProcessing , EDAconfig , DataTransform
 
 class ConfigurationManager:
     def __init__(self,
@@ -38,3 +38,29 @@ class ConfigurationManager:
         pre_processing = PreProcessing(df_pre_dir=config.df_pre_dir,drop_columns=params.drop_columns,axis = params.axis)
         
         return pre_processing
+
+
+    def EDA_configuration(self) -> EDAconfig:
+        config = self.config.EDA_config
+        create_directories([config.report_path])
+
+        eda_config = EDAconfig(report_path=config.report_path,df_clean_path= config.df_clean_path)
+
+        return eda_config
+
+    def data_transformation_config(self) ->  DataTransform:
+        config  = self.config.DataTransform
+        param = self.params.DataTransform
+        # create_directories([config.transformed_df_path]) 
+        create_directories([config.scaler_path])
+        # create_directories([config.pca_model_path])
+
+        data_tra_config = DataTransform(df_path = config.df_path,
+                                        test_size=param.test_size,random_state=param.random_state,smote_k_neighbours= param.smote_k_neighbours,
+                                        n_pca_components=param.n_pca_components,scaler_path= config.scaler_path,
+                                       )
+                                 
+                                        
+        return data_tra_config
+
+    
