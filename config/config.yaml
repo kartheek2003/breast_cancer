@@ -23,4 +23,5 @@ DataTransform:
 
 
 model_building :
-  model_save_path : artifacts/models/ensemble
+  model_save_path : artifacts/models/
+  report_save_path : artifacts/model_report 

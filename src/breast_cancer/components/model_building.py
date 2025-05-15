@@ -2,7 +2,7 @@ from breast_cancer import logger
 from breast_cancer.pipeline.stage04_data_transformation import data_transformation_pipeline
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier
 from sklearn.model_selection import RandomizedSearchCV
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score , classification_report , confusion_matrix
 import joblib
 import os 
 from breast_cancer.entity.config_entity import ModelBuilding
@@ -63,6 +63,27 @@ class ModelBuildingComponent :
         logger.info("prediction done")
 
         acc = accuracy_score(y_true = y_test , y_pred=y_pred)
+
+        conf_matrix = confusion_matrix(y_test , y_pred)
+
+        report = classification_report(y_test,y_pred)
+
+                # Text format
+        report_text = f"""
+        Accuracy: {acc:.4f}
+
+        Classification Report:
+        {report}
+
+        Confusion Matrix:
+        {conf_matrix}
+        """
+
+
+                # Save to file
+        # os.makedirs("artifacts/reports", exist_ok=True)
+        with open(os.path.join(self.config.report_save_path , "final_report.txt"), "w") as f:
+            f.write(report_text)
 
         print(f"Ensemble Test Accuracy: {acc:.4f}")
 

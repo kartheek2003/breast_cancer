@@ -67,7 +67,8 @@ class ConfigurationManager:
         param = self.params.model_building
         
         model_building_configuration = ModelBuilding(cv = param.cv , random_state= param.random_state,n_iter= param.n_iter , n_jobs = param.n_jobs,
-                                                     model_save_path= config.model_save_path)
+                                                     model_save_path= config.model_save_path,report_save_path= config.report_save_path)
         create_directories([config.model_save_path])
+        create_directories([config.report_save_path])
         return model_building_configuration
     
