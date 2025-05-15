@@ -67,6 +67,7 @@ class ModelBuildingComponent :
         conf_matrix = confusion_matrix(y_test , y_pred)
 
         report = classification_report(y_test,y_pred)
+        
 
                 # Text format
         report_text = f"""
@@ -77,6 +78,8 @@ class ModelBuildingComponent :
 
         Confusion Matrix:
         {conf_matrix}
+
+        
         """
 
 
