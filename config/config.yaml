@@ -20,3 +20,7 @@ DataTransform:
   # transformed_df_path : artifacts/DataTransformation
   scaler_path : artifacts/models/scaler
   # pca_model_path : artifacts/models/pca
+
+
+model_building :
+  model_save_path : artifacts/models/ensemble

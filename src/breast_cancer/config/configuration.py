@@ -6,7 +6,7 @@ from breast_cancer.constants import  *
 
 from breast_cancer.utils.common import read_yaml , create_directories
 
-from breast_cancer.entity.config_entity import DataIngestionConfig , PreProcessing , EDAconfig , DataTransform
+from breast_cancer.entity.config_entity import DataIngestionConfig , PreProcessing , EDAconfig , DataTransform , ModelBuilding
 
 class ConfigurationManager:
     def __init__(self,
@@ -62,5 +62,12 @@ class ConfigurationManager:
                                  
                                         
         return data_tra_config
-
+    def model_building_config(self):
+        config = self.config.model_building
+        param = self.params.model_building
+        
+        model_building_configuration = ModelBuilding(cv = param.cv , random_state= param.random_state,n_iter= param.n_iter , n_jobs = param.n_jobs,
+                                                     model_save_path= config.model_save_path)
+        create_directories([config.model_save_path])
+        return model_building_configuration
     

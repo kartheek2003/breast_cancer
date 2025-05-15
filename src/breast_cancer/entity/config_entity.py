@@ -30,3 +30,12 @@ class DataTransform:
     n_pca_components: int
     scaler_path : Path
     # pca_model_path : Path
+
+@dataclass 
+class ModelBuilding:
+    cv : int
+    random_state : int
+    n_iter : int
+    n_jobs : int
+    model_save_path : str
+    

@@ -12,3 +12,9 @@ DataTransform :
   random_state : 42
   smote_k_neighbours : 5
   n_pca_components: 5
+
+model_building :
+  cv : 5
+  random_state : 42
+  n_iter : 5
+  n_jobs : -1

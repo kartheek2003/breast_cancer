@@ -16,4 +16,6 @@ Flask-Cors
 python-box
 scikit-learn
 imbalanced-learn
+xgboost
+typing
 -e .

@@ -5,6 +5,7 @@ from breast_cancer.pipeline.stage01_data_ingestion import DataIngestionPipeline
 from breast_cancer.pipeline.stage02_pre_processing import DataPreProessingPipeline
 from breast_cancer.pipeline.stage03_EDA import EDAPipeline
 from breast_cancer.pipeline.stage04_data_transformation import data_transformation_pipeline
+from breast_cancer.pipeline.stage05_model_building import ModelBuildingPipeline
 
 STAGE_NAME = "DATA INGESTION"
 try :
@@ -54,3 +55,16 @@ try :
 
 except Exception as e:
     raise e
+
+
+STAGE_NAME = "MODEL BUILDING"
+
+if __name__ == "__main__":
+    try :
+        logger.info(f">>>>{STAGE_NAME} STARTED<<<<")
+        obj = ModelBuildingPipeline()
+        obj.main()
+        logger.info(f">>>>{STAGE_NAME} COMPLETED<<<<")
+
+    except Exception as e:
+        raise e
