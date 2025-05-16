@@ -6,7 +6,7 @@ from breast_cancer.constants import  *
 
 from breast_cancer.utils.common import read_yaml , create_directories
 
-from breast_cancer.entity.config_entity import DataIngestionConfig , PreProcessing , EDAconfig , DataTransform , ModelBuilding
+from breast_cancer.entity.config_entity import DataIngestionConfig , PreProcessing , EDAconfig , DataTransform , ModelBuilding , Prediction
 
 class ConfigurationManager:
     def __init__(self,
@@ -72,3 +72,9 @@ class ConfigurationManager:
         create_directories([config.report_save_path])
         return model_building_configuration
     
+    def prediction_config(self):
+        config = self.config.prediction
+
+        prediction_config = Prediction(model_path= config.model_path, scaler_path=config.scaler_path)
+
+        return prediction_config

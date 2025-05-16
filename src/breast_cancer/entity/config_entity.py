@@ -39,3 +39,9 @@ class ModelBuilding:
     n_jobs : int
     model_save_path : str
     report_save_path : str
+
+
+@dataclass
+class Prediction:
+    model_path : Path
+    scaler_path : Path

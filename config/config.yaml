@@ -25,3 +25,10 @@ DataTransform:
 model_building :
   model_save_path : artifacts/models/
   report_save_path : artifacts/model_report 
+
+
+
+prediction:
+  model_path : artifacts\models\ensemble.pkl
+  scaler_path : artifacts\models\scaler\scaler.pkl
+  
