@@ -29,6 +29,6 @@ model_building :
 
 
 prediction:
-  model_path : artifacts\models\ensemble.pkl
-  scaler_path : artifacts\models\scaler\scaler.pkl
+  model_path : artifacts/models/ensemble.pkl
+  scaler_path : artifacts/models/scaler/scaler.pkl
   
