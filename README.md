@@ -74,3 +74,12 @@ pip install -r requirements.txt
 python app.py
 Open your browser at http://127.0.0.1:8000 to interact with the app.
 
+## 🤝 Contributing  
+
+Contributions are welcome!  
+Feel free to **fork** this repository and create a **pull request** with your improvements.  
+
+## ✨ Author  
+
+**Kartheek Akkabathula**  
+[GitHub](https://github.com/kartheek2003)  
