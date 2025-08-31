@@ -73,7 +73,7 @@ cd breast_cancer
 pip install -r requirements.txt
 python app.py
 ```
-Open your browser at http://127.0.0.1:8000 to interact with the app.
+> Open your browser at http://127.0.0.1:8000 to interact with the app.
 
 ## 🤝 Contributing  
 
