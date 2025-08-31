@@ -48,6 +48,23 @@ A clinical-grade, end-to-end machine learning solution that classifies breast ca
 - **Containerize with Docker Compose** for multi-service orchestration.  
 - **Introduce MLOps pipelines** for model versioning, monitoring, and automatic deployment.  
 
+## 🧪 Sample Test Data
+
+You can use the following sample rows to test the prediction web app:
+
+| id       | diagnosis | radius_mean | texture_mean | perimeter_mean | area_mean | smoothness_mean | compactness_mean | concavity_mean | concave points_mean | symmetry_mean | fractal_dimension_mean | radius_se | texture_se | perimeter_se | area_se | smoothness_se | compactness_se | concavity_se | concave points_se | symmetry_se | fractal_dimension_se | radius_worst | texture_worst | perimeter_worst | area_worst | smoothness_worst | compactness_worst | concavity_worst | concave points_worst | symmetry_worst | fractal_dimension_worst |
+|----------|-----------|-------------|-------------|----------------|-----------|-----------------|-----------------|---------------|--------------------|--------------|-----------------------|-----------|-----------|--------------|---------|----------------|----------------|--------------|------------------|-------------|--------------------|--------------|--------------|-----------------|-----------|-----------------|------------------|----------------|---------------------|----------------|-----------------------|
+| 849014   | M         | 19.81       | 22.15       | 130.00         | 1260.00   | 0.09831         | 0.10270         | 0.14790       | 0.09498            | 0.15820      | 0.05395               | 0.7582    | 1.017     | 5.865        | 112.4   | 0.006494       | 0.01893        | 0.03391      | 0.01521          | 0.01356     | 0.001997           | 27.32        | 30.88        | 186.8           | 2398.0    | 0.1512          | 0.3150           | 0.5372         | 0.2388              | 0.2768         | 0.07615                |
+| 8510426  | B         | 13.54       | 14.36       | 87.46          | 566.3     | 0.09779         | 0.08129         | 0.06664       | 0.04781            | 0.18850      | 0.05766               | 0.2699    | 0.7886    | 2.058        | 23.56   | 0.008462       | 0.01460        | 0.02387      | 0.01315          | 0.01980     | 0.002300           | 15.11        | 19.26        | 99.7            | 711.2     | 0.1440          | 0.1773           | 0.2390         | 0.1288              | 0.2977         | 0.07259                |
+
+
+> **Note:** Geometric features (radius, perimeter, area) are measured in **pixels/pixels²** based on digitized FNA images, not mm/mm². All other features are **unitless** ratios/statistics.
+
+---
+
+💡 **How to use:**  
+Copy one row (without the `diagnosis` column, since that's the label) and paste the feature values into the web app form to get a prediction.
+
 
 ###  How to Run Locally
 ```bash
