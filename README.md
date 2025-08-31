@@ -39,9 +39,9 @@ A clinical-grade, end-to-end machine learning solution that classifies breast ca
 - Incorporates **balanced resampling** (via SMOTE), dimensionality reduction, and ensemble learning for trustworthy outputs.
 
 ###  Project Demo
-| Interface | Prediction Output |
-|-----------|-------------------|
-| ![Homepage](images/bc_homepage.png) | ![Prediction](images/bc_prediction.png) |
+| Interface | Prediction bengin | Prediction Malignant |
+|-----------|-------------------|-----------------------|
+| ![Homepage](webimages/homepage_bc.png) | ![Prediction](webimages/prediction_bengin.png) | ![Prediction](webimages/prediction_malignant.png) |
 
 ##  Future Improvements
 - **Optimize model accuracy and latency** with transfer learning or neural network techniques.  
