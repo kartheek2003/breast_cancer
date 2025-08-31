@@ -72,6 +72,7 @@ git clone https://github.com/kartheek2003/breast_cancer.git
 cd breast_cancer
 pip install -r requirements.txt
 python app.py
+```
 Open your browser at http://127.0.0.1:8000 to interact with the app.
 
 ## 🤝 Contributing  
